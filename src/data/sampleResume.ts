@@ -1,0 +1,95 @@
+import { ResumeData } from '@/types/resume';
+
+export const sampleResume: ResumeData = {
+  name: 'Alex Chen',
+  title: 'Senior Full-Stack Engineer',
+  summary: 'Passionate engineer with 7+ years building scalable web applications. Led teams of 5-12 engineers shipping products used by millions. Deep expertise in distributed systems, React ecosystems, and cloud architecture.',
+  email: 'alex.chen@email.com',
+  phone: '+1 (555) 123-4567',
+  location: 'San Francisco, CA',
+  website: 'https://alexchen.dev',
+  github: 'https://github.com/alexchen',
+  linkedin: 'https://linkedin.com/in/alexchen',
+  skills: [
+    { name: 'React', level: 95, projects: ['DataViz Pro', 'TaskFlow'], context: 'Built 12+ production apps, contributed to React core' },
+    { name: 'TypeScript', level: 92, projects: ['DataViz Pro', 'TaskFlow', 'API Gateway'], context: 'Full-stack TS, custom type utilities' },
+    { name: 'Node.js', level: 88, projects: ['API Gateway', 'TaskFlow'], context: 'High-throughput APIs serving 10M+ req/day' },
+    { name: 'Python', level: 85, projects: ['ML Pipeline', 'DataViz Pro'], context: 'ML pipelines, data processing, FastAPI' },
+    { name: 'PostgreSQL', level: 82, projects: ['TaskFlow', 'API Gateway'], context: 'Schema design, query optimization, partitioning' },
+    { name: 'AWS', level: 80, projects: ['API Gateway', 'ML Pipeline'], context: 'Lambda, ECS, RDS, S3, CloudFront' },
+    { name: 'Docker', level: 78, projects: ['API Gateway', 'ML Pipeline'], context: 'Multi-stage builds, orchestration' },
+    { name: 'GraphQL', level: 75, projects: ['DataViz Pro'], context: 'Schema-first design, federation' },
+  ],
+  experience: [
+    {
+      company: 'TechCorp Inc.',
+      role: 'Senior Full-Stack Engineer',
+      period: 'Jan 2022 — Present',
+      description: [
+        'Led redesign of the analytics dashboard, improving load times by 60% and user engagement by 35%',
+        'Architected microservices migration from monolith, reducing deployment time from 2 hours to 15 minutes',
+        'Mentored 4 junior engineers, establishing code review practices that reduced bug rate by 40%',
+        'Implemented real-time data pipeline processing 2M+ events daily using Kafka and Redis',
+      ],
+      techStack: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Kafka', 'Redis', 'AWS'],
+      highlights: ['60% faster load times', '35% more engagement', '40% fewer bugs'],
+    },
+    {
+      company: 'StartupXYZ',
+      role: 'Full-Stack Developer',
+      period: 'Mar 2019 — Dec 2021',
+      description: [
+        'Built the entire frontend from scratch for a B2B SaaS platform serving 500+ enterprise clients',
+        'Designed and implemented RESTful API layer handling 5M requests/day with 99.9% uptime',
+        'Introduced CI/CD pipeline reducing release cycle from 2 weeks to daily deployments',
+      ],
+      techStack: ['React', 'Python', 'FastAPI', 'MongoDB', 'Docker', 'GCP'],
+      highlights: ['500+ enterprise clients', '99.9% uptime', 'Daily deployments'],
+    },
+    {
+      company: 'DevAgency',
+      role: 'Junior Developer',
+      period: 'Jun 2017 — Feb 2019',
+      description: [
+        'Developed responsive web applications for 20+ clients across industries',
+        'Created reusable component library reducing development time by 30%',
+      ],
+      techStack: ['JavaScript', 'React', 'CSS', 'Node.js'],
+    },
+  ],
+  projects: [
+    {
+      name: 'DataViz Pro',
+      description: 'Real-time data visualization platform with drag-and-drop dashboard builder. Supports 15+ chart types with live data connections.',
+      techStack: ['React', 'TypeScript', 'D3.js', 'GraphQL', 'WebSocket'],
+      githubUrl: 'https://github.com/alexchen/dataviz-pro',
+      demoUrl: 'https://dataviz-pro.demo.com',
+      challenges: 'Rendering 100K+ data points at 60fps required custom WebGL rendering layer and virtual scrolling.',
+      architecture: 'Micro-frontend architecture with shared state via Redux. Real-time updates through WebSocket with optimistic UI updates.',
+      codeSnippet: '// Custom hook for real-time data\nconst useStreamData = (source: string) => {\n  const [data, setData] = useState([]);\n  useEffect(() => {\n    const ws = new WebSocket(source);\n    ws.onmessage = (e) => setData(prev => [...prev, JSON.parse(e.data)]);\n    return () => ws.close();\n  }, [source]);\n  return data;\n};',
+    },
+    {
+      name: 'TaskFlow',
+      description: 'AI-powered project management tool with intelligent task prioritization and team workload balancing.',
+      techStack: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'OpenAI API'],
+      githubUrl: 'https://github.com/alexchen/taskflow',
+      challenges: 'Balancing AI suggestions with user autonomy required careful UX design and confidence scoring.',
+      architecture: 'Event-sourced backend with CQRS pattern. AI layer runs asynchronously with results cached in Redis.',
+    },
+    {
+      name: 'API Gateway',
+      description: 'High-performance API gateway handling authentication, rate limiting, and request routing for microservices.',
+      techStack: ['Node.js', 'TypeScript', 'Redis', 'Docker', 'AWS Lambda'],
+      githubUrl: 'https://github.com/alexchen/api-gateway',
+      challenges: 'Achieving sub-10ms latency at 10K RPS required custom connection pooling and circuit breaker patterns.',
+    },
+  ],
+  education: [
+    {
+      institution: 'University of California, Berkeley',
+      degree: 'B.S. Computer Science',
+      period: '2013 — 2017',
+      gpa: '3.8/4.0',
+    },
+  ],
+};
