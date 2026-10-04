@@ -2,95 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --background: 220 20% 97%;
+    --foreground: 222 47% 11%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 222 47% 11%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 222 47% 11%;
     --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
+    --secondary: 220 14% 92%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 220 14% 92%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 220 14% 92%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
+    --border: 220 13% 88%;
+    --input: 220 13% 88%;
+    --ring: 222 47% 11%;
     --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -98,8 +31,80 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* ===== Resume theme presets (applied to the preview surface) ===== */
+.resume-theme {
+  --rt-bg: #ffffff;
+  --rt-surface: #f6f6f4;
+  --rt-text: #1a1a1a;
+  --rt-muted: #6b6b6b;
+  --rt-accent: #2563eb;
+  --rt-border: #e5e5e0;
+  --rt-font-heading: 'Georgia', serif;
+  --rt-font-body: 'Inter', system-ui, sans-serif;
+  --rt-font-mono: 'JetBrains Mono', monospace;
+}
+
+.resume-theme-minimal {
+  --rt-bg: #ffffff;
+  --rt-surface: #f7f7f5;
+  --rt-text: #191919;
+  --rt-muted: #737373;
+  --rt-accent: #2563eb;
+  --rt-border: #e8e8e4;
+  --rt-font-heading: 'Inter', system-ui, sans-serif;
+  --rt-font-body: 'Inter', system-ui, sans-serif;
+}
+
+.resume-theme-corporate {
+  --rt-bg: #fbfcfe;
+  --rt-surface: #eef2f8;
+  --rt-text: #0f2440;
+  --rt-muted: #5a6b82;
+  --rt-accent: #1e4e8c;
+  --rt-border: #d5dfeec;
+  --rt-border: #d5dfee;
+  --rt-font-heading: 'Georgia', serif;
+  --rt-font-body: 'Inter', system-ui, sans-serif;
+}
+
+.resume-theme-cyberpunk {
+  --rt-bg: #0b0b14;
+  --rt-surface: #141422;
+  --rt-text: #e8e8f5;
+  --rt-muted: #8a8aa8;
+  --rt-accent: #00e5ff;
+  --rt-border: #26263a;
+  --rt-font-heading: 'Space Grotesk', 'Inter', sans-serif;
+  --rt-font-body: 'Inter', system-ui, sans-serif;
+}
+
+.resume-theme-hacker {
+  --rt-bg: #0a0f0a;
+  --rt-surface: #0f160f;
+  --rt-text: #c8f0c8;
+  --rt-muted: #5f8f5f;
+  --rt-accent: #33ff66;
+  --rt-border: #1d2e1d;
+  --rt-font-heading: 'JetBrains Mono', monospace;
+  --rt-font-body: 'JetBrains Mono', monospace;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #resume-print-area,
+  #resume-print-area * {
+    visibility: visible;
+  }
+  #resume-print-area {
+    position: absolute;
+    inset: 0;
+    width: 100%;
   }
 }
