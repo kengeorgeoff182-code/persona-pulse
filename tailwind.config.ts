@@ -57,21 +57,6 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        resume: {
-          bg: "hsl(var(--resume-bg))",
-          text: "hsl(var(--resume-text))",
-          heading: "hsl(var(--resume-heading))",
-          accent: "hsl(var(--resume-accent))",
-          muted: "hsl(var(--resume-muted))",
-          card: "hsl(var(--resume-card))",
-          border: "hsl(var(--resume-border))",
-          glow: "hsl(var(--resume-glow))",
-        },
-      },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
-        display: ['Playfair Display', 'serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
